@@ -1,0 +1,161 @@
+//
+// Typography
+// ---------------------------
+
+// Links
+// ------
+a {
+    color: $linkColor;
+    text-decoration: none;
+    transition: color $transTimeFast $easeOutQuad;
+    &:hover {
+        color: $linkColorHover;
+        text-decoration: none;
+    }
+}
+
+// ::selection {
+//     background: $lightGray;
+//     color: $blue;
+// }
+
+// ::-moz-selection {
+//     background: $lightGray;
+//     color: $blue;
+// }
+
+// Body text
+// ----------
+
+p {
+    margin: 0 0 1.5em;
+}
+
+p,
+li,
+dd {
+    font-size: 1.85em;
+    line-height: 1.8;
+    // Happens all too often unfortunately
+    > p {
+        font-size: 1rem;
+    }
+}
+
+// Definition List
+// -----------------
+
+dl {
+}
+
+dt {
+    font-size: 1.8em;
+    margin: 0 0 1em;
+}
+
+dd {
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+    > p {
+        font-size: 1rem;
+    }
+}
+
+// Emphasis & Misc
+// -----------------
+em {
+    font-style: italic;
+}
+
+cite {
+    font-style: normal;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 2em;
+    border-left: 2px solid $lightGray;
+}
+
+strong {
+    font-family: $headingsFontFamily;
+}
+
+// Headings
+// ---------
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin: 0 0 1em;
+    font-weight: $headingsFontWeight;
+    font-family: $headingsFontFamily;
+    line-height: 1;
+    text-rendering: optimizelegibility;
+}
+
+h1,
+.h1 {
+    margin: 1em 0;
+    font-size: 5em;
+    line-height: 1.29;
+    font-family: $sans;
+}
+
+h2,
+.h2 {
+    font-size: 3.7em;
+    line-height: 1.2;
+}
+
+h3,
+.h3 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+h4,
+.h4 {
+    font-size: 1.8em;
+}
+
+h5,
+.h5 {
+    font-size: 1.7em;
+}
+
+h6,
+.h6 {
+    font-size: 1.6em;
+}
+
+p.lead {
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+.color-white {
+    color: $white;
+}
+
+@include tablet {
+    p,
+    li,
+    dd {
+        line-height: 2.25;
+    }
+}

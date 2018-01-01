@@ -1,0 +1,37 @@
+//
+// Utilities
+// --------------------------------------------------
+
+// Toggling
+.hide,
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+// Visibility
+.invisible {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+
+// Accessible yet invisible text
+.hide-text {
+    @include hide-text;
+}
+
+// No pointer events
+.no-pointer-events {
+    pointer-events: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,48 @@
+{
+	"name": "delicious-shopify-js-gulp",
+	"version": "1.0.0",
+	"description": "Publish Delicious Library exports to external sites as a javascript app",
+	"main": "exportXMLtoJSON.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pgraci/delicious-shopify-js-gulp.git"
+	},
+	"keywords": [
+		"delicious",
+		"shopify"
+	],
+	"author": "Phil Graci",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pgraci/delicious-shopify-js-gulp/issues"
+	},
+	"homepage": "https://github.com/pgraci/delicious-shopify-js-gulp#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babelify": "^8.0.0",
+		"browser-sync": "^2.23.1",
+		"browserify": "^14.5.0",
+		"del": "^3.0.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.1.0",
+		"gulp-babel": "^7.0.0",
+		"gulp-filesize": "0.0.6",
+		"gulp-minify-css": "^1.2.4",
+		"gulp-notify": "^3.0.0",
+		"gulp-replace": "^0.6.1",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.2",
+		"gulp-uglify": "^3.0.0",
+		"gulp-util": "^3.0.8",
+		"lodash": "^4.17.4",
+		"pretty-hrtime": "^1.0.3",
+		"require-dir": "^0.3.2",
+		"vinyl-source-stream": "^2.0.0",
+		"watchify": "^3.9.0",
+		"xml-parser": "^1.2.1"
+	}
+}

@@ -1,0 +1,167 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin mobile {
+    @media (min-width: #{$mobileWidth}) {
+        @content;
+    }
+}
+
+@mixin largeMobile {
+    @media (min-width: #{$largeMobileWidth}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tabletWidth}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktopWidth}) {
+        @content;
+    }
+}
+
+@mixin largeDesktop {
+    @media (min-width: #{$largeDesktopWidth}) {
+        @content;
+    }
+}
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value * 10}px;
+        @if $i < $max {
+            $pxValues: #{$pxValues + ' '};
+        }
+    }
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + $value}rem;
+        @if $i < $max {
+            $remValues: #{$remValues + ' '};
+        }
+    }
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+}
+
+// Placeholder text
+@mixin placeholder($color: $placeholderText) {
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+}
+
+// Hide text
+@mixin hide-text($height: 1em) {
+    height: $height;
+    line-height: 1.5;
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Resize anything
+@mixin resizable($direction) {
+    resize: $direction; // Options: horizontal, vertical, both
+    overflow: auto; // Safari fix
+}
+
+@mixin line-break {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word; // <== Non standard for webkit
+    @include hyphens;
+}
+
+// Layout
+@mixin flex-row-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-col-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+// gradients
+@mixin gradient($args...) {
+    // angle, color1, color2
+    background-image: linear-gradient($args);
+}
+
+@mixin bulleted-list--yellow {
+    li {
+        list-style-image: url($baseUrl +
+            '/images/svgs/hexagon-list-item-yellow.svg');
+    }
+}
+
+@mixin bulleted-list--blue {
+    li {
+        list-style-image: url($baseUrl +
+            '/images/svgs/hexagon-list-item-blue.svg');
+    }
+}
+
+@mixin inset-content {
+    padding: 0 4em;
+    margin: 0 auto;
+
+    @include tablet {
+        padding: 0 8%;
+    }
+}
+
+@mixin column-text {
+    column-count: 2;
+    column-gap: 8vw;
+    column-width: 22vw;
+
+    @include largeDesktop {
+        column-gap: 140px;
+        column-width: 300px;
+        padding: 0 100px;
+    }
+}

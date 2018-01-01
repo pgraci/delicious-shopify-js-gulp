@@ -1,0 +1,33 @@
+//
+// CSS3 Keyframe Animations
+// --------------------------------------------------
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseAfter {
+    from {
+        transform: scale(0.5, 0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+@keyframes pulseBefore {
+    from {
+        -webkit-transform: scale(1, 1);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,67 @@
+//
+// Layouts
+// ---------------------------
+
+.delicious-app {
+    font-size: 1em;
+    font-family: $baseFontFamily;
+    margin: 5em auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90vw;
+}
+
+.delicious-item {
+    cursor: pointer;
+    width: 48%;
+    height: 90vw;
+    margin-bottom: 2em;
+    background-color: $lightGray;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(1);
+    transition: all $transTime $easeInOutCubic;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px #333;
+        z-index: 1;
+    }
+}
+
+.title {
+    color: $black;
+    font-size: 1.6em;
+    height: 5.6em;
+    overflow: hidden;
+    font-weight: normal;
+    letter-spacing: -0.05em;
+    padding: 1em;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@include tablet {
+    .delicious-item {
+        width: 32%;
+        height: 56vw;
+    }
+}
+
+@include desktop {
+    .delicious-item {
+        width: 24%;
+        height: 40vw;
+    }
+}
+
+@include largeDesktop {
+}
