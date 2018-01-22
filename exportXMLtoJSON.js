@@ -6,6 +6,8 @@ const whitelistedKeys = [
     'uuidString',
     'type',
     'title',
+    'notes',
+    'associatedURL',
     'coverImageLargeURLString'
 ];
 
