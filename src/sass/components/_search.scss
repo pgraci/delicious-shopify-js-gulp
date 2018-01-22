@@ -1,0 +1,38 @@
+//
+// Search
+// ---------------------------
+.delicious-header-search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: $lightGray;
+
+    .delicious-header-search {
+        font-size: 2em;
+        padding: 0.5em;
+        outline: none;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid $lightGray;
+    }
+
+    button {
+        width: auto;
+        margin-left: 1em;
+        border: 0;
+        background-color: rgb(65, 65, 65);
+        color: $white;
+        transition: background 0.25s ease-in-out;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 1em;
+
+        &:hover {
+            background-color: rgba(65, 65, 65, 0.8);
+        }
+    }
+}

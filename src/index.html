@@ -12,9 +12,19 @@
 
 <body>
 	<div id="delicious-app" class="delicious-app">
-		<div class="loader">
-			Loading...
+		<div class="delicious-header-search-wrapper">
+			<input type="text" placeholder="Search..." id="delicious-header-search-input" class="delicious-header-search delicious-header-search-input">
+			<button id="delicious-header-search-button" class="delicious-header-search">Search</button>
 		</div>
+		<div id="delicious-app-library" class="delicious-app-library">
+			<div class="loader">
+				Loading...
+			</div>
+		</div>
+	</div>
+	<div id="delicious-details-modal" class="delicious-details modal">
+		<div id="delicious-details-modal-content">LOADING...</div>
+		<button id="delicious-close-modal" class="delicious-close-modal">&#9587;</button>
 	</div>
 	<script src="delicious.js"></script>
 	<script id="__bs_script__">//<![CDATA[

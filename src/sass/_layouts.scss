@@ -6,11 +6,14 @@
     font-size: 1em;
     font-family: $baseFontFamily;
     margin: 5em auto;
+    max-width: 90vw;
+}
+
+.delicious-app-library {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 90vw;
 }
 
 .delicious-item {
